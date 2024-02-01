@@ -8,7 +8,9 @@
 #include <typeinfo>
 #include <exception>
 #include <initializer_list>
-#include <cstdalign>
+#if __has_include(<cstdalign>)
+#   include <cstdalign>
+#endif
 #include <stdexcept>
 #include <cassert>
 #include <cerrno>
